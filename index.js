@@ -1,8 +1,8 @@
 function imagefetch() {
-    fetch('https://api.nasa.gov/planetary/apod?api_key=IesiwQRYuSJxjToXZz2SesULB5PbGwc5n3Kt90L1&count=2')
+    fetch('https://api.nasa.gov/planetary/apod?api_key=IesiwQRYuSJxjToXZz2SesULB5PbGwc5n3Kt90L1&count=10')
     .then(response => response.json())
     .then(data => {console.log(data)    
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 10; i++) {
         // console.log("pic" + i);
         // document.getElementById("pic' + i).src=data[i]['hdurl'];
         appendPosts(data[i], i)

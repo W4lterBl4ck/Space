@@ -2,18 +2,20 @@
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
     --grid-min: 300px;
-    margin: 0;
 }
 
 .navbar {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1rem);
     z-index: 9999;
 }
+
 
 .title {
     font-size: clamp(2rem, 5vw + 1rem, 4rem);
@@ -30,11 +32,12 @@
 
 .container {
     /* background-color: rgb(94, 148, 211); */
-    margin-top: 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
     justify-items: center;
+    max-width: 1200px;
+    margin: 150px auto;
 }
 
 @media (max-width: 990px) {
@@ -50,7 +53,6 @@
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.3);
-    /* max-width: 400px; */
 }
 
 .card-heading {
@@ -68,6 +70,12 @@
     transform: scale(1.05);
 }
 
+.description {
+    width: 400px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
 .like {
     border: none;
     background: rgb(86, 159, 201);
@@ -79,8 +87,27 @@
 
 .like:hover {
     transform: scale(1.1);
+    background: rgb(96, 178, 226);
 }
 
 .like:active {
+    background: red;
+}
+
+.unlike {
+    border: none;
+    background: rgb(86, 159, 201);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-radius: 5rem;
+    transition: 0.3s;
+}
+
+.unlike:hover {
+    transform: scale(1.1);
+    background: rgb(96, 178, 226);
+}
+
+.unlike:active {
     background: red;
 }
