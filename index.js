@@ -14,13 +14,15 @@ function likedislike(number) {
 
     if (document.getElementById('likenum' + number).innerHTML === '1') {
         document.getElementById('likenum' + number).innerHTML='0';
+        document.getElementById('button' + number).innerHTML='<i class="far fa-heart"></i> Like';
+        document.getElementById('button' + number).style.background="#569fc9";
     }
     else {
         document.getElementById('likenum' + number).innerHTML='1';
+        document.getElementById('button' + number).innerHTML='<i class="fas fa-heart-broken"></i> Unlike';
+        document.getElementById('button' + number).style.background="#9f56c9";
     }
 }
-
-
 
 function appendPosts(data, index) {
 	let morePosts = document.createElement('div');
@@ -30,8 +32,8 @@ function appendPosts(data, index) {
             <img id="pic0" class="pictures" src=`+data['hdurl']+` alt="`+data['title']+`">
             <p class="description">`+data['explanation']+` </p>
             <div class="date">`+data['date']+`</div>
-            <p id="likenum`+index+`">0</p>
-            <button id="`+index+`" class="like" onclick="likedislike(`+index+`)">
+            <p id="likenum`+index+`" style="display: none;">0</p>
+            <button id="button`+index+`" class="like" onclick="likedislike(`+index+`)">
                 <i class="far fa-heart"></i>
                 Like
             </button>

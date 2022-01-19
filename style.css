@@ -53,6 +53,8 @@
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: -5px;
 }
 
 .card-heading {
@@ -73,12 +75,13 @@
 .description {
     width: 400px;
     font-size: 1.25rem;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.75rem;
 }
 
 .like {
     border: none;
-    background: rgb(86, 159, 201);
+    background: #569fc9;
     cursor: pointer;
     padding: 1rem 1.5rem;
     border-radius: 5rem;
@@ -91,23 +94,5 @@
 }
 
 .like:active {
-    background: red;
-}
-
-.unlike {
-    border: none;
-    background: rgb(86, 159, 201);
-    cursor: pointer;
-    padding: 1rem 1.5rem;
-    border-radius: 5rem;
-    transition: 0.3s;
-}
-
-.unlike:hover {
-    transform: scale(1.1);
-    background: rgb(96, 178, 226);
-}
-
-.unlike:active {
     background: red;
 }
